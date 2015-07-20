@@ -1,11 +1,11 @@
-# VKUSNOTEKA
-## Interesting things of the project
+# VKUSNOTEKA 
+## TOP-MENU
 
-Files are in the project folders. 
- 
-The project was created use CMS Joomla2.5!
+I did it use bootstrap framework and original(default) Joomla! 2.5 code.
 
-There are much more changes inside.
+Yes, this **simple operation** make more problems for users who want to do it.
 
-All changes are in owns folders. 
+I think is good to show how i did it *easy*... 
+
+You can see origiinal default.php file inside
 
