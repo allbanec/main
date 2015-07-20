@@ -17,8 +17,7 @@
                 <span class="phone-number">8499 488 61 00</span>
                 <span class="phone-number">8903 668 98 98</span>
             </li>
-        </ul><?php /*    */   ?>
-
+        </ul>
 <div class="collapse navbar-collapse" id="top-menu">
     <ul class="nav navbar-nav navbar-right menu<?php echo $class_sfx;?>"
         <?php

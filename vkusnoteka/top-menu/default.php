@@ -10,7 +10,7 @@ if ($params->get('tag_id')!=NULL) {
         $class = 'item-'.$item->id;
         if ($item->id == $active_id) {
             $class .= ' current';
-        } 
+        }
         if (in_array($item->id, $path)) {
             $class .= ' active';
         }
