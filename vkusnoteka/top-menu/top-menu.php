@@ -11,7 +11,7 @@
         </div>
         <ul class="nav navbar-nav phones disabled" id="phones">
             <li class="phone-order">
-                <span class="phone-order-text">«¿ ¿« œŒ “≈À≈‘ŒÕ¿Ã:</span>
+                <span class="phone-order-text">–ó–ê–ö–ê–ó –ü–û –¢–ï–õ–ï–§–û–ù–ê–ú:</span>
             </li>
             <li class="phone-place">
                 <span class="phone-number">8499 488 61 00</span>
