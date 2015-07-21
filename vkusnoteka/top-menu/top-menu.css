@@ -1,0 +1,202 @@
+body .navbar-default {
+  background-color: #ffdfa4;
+  border: none;
+  border-radius: 0;
+  box-shadow: 0px 3px 3px #d5a957; }
+  @media screen and (max-width: 468px) {
+    body .navbar-default {
+      padding: 0;
+      margin: 0; } }
+  body .navbar-default .navbar-toggle {
+    border-color: #9b1a45;
+    border-radius: 0; }
+    body .navbar-default .navbar-toggle .icon-bar {
+      background-color: #9b1a45; }
+    body .navbar-default .navbar-toggle:hover {
+      background-color: #9b1a45; }
+      body .navbar-default .navbar-toggle:hover .icon-bar {
+        background-color: white; }
+  @media screen and (max-width: 768px) {
+    body .navbar-default .navbar-collapse {
+      padding: 0; } }
+  @media screen and (max-width: 468px) {
+    body .navbar-default .navbar-collapse {
+      padding: 0; } }
+  @media screen and (max-width: 468px) {
+    body .navbar-default .container-fluid {
+      padding: 0;
+      margin: 0; } }
+  @media screen and (max-width: 468px) {
+    body .navbar-default .container-fluid .navbar-collapse {
+      padding: 0;
+      margin: 0;
+      border-color: #9b1a45; } }
+  @media screen and (max-width: 468px) {
+    body .navbar-default .container-fluid .navbar-header {
+      padding: 0 15px; } }
+  body .navbar-default .container-fluid .navbar-header a.navbar-brand {
+    background: url("../img/logo.jpg") 0 0 no-repeat;
+    width: 155px;
+    height: 50px;
+    padding: 0;
+    z-index: 9999; }
+    body .navbar-default .container-fluid .navbar-header a.navbar-brand.disabled {
+      display: none; }
+    body .navbar-default .container-fluid .navbar-header a.navbar-brand.active {
+      display: block; }
+      @media screen and (max-width: 468px) {
+        body .navbar-default .container-fluid .navbar-header a.navbar-brand.active {
+          display: none; } }
+  body .navbar-default #phones.disabled {
+    display: none; }
+  body .navbar-default #phones.active {
+    display: block; }
+    @media screen and (max-width: 468px) {
+      body .navbar-default #phones.active {
+        display: none; } }
+  body .navbar-default #phones .phone-place {
+    display: block; }
+    body .navbar-default #phones .phone-place .phone-number {
+      display: block;
+      font-size: 24px;
+      line-height: 24px; }
+  body .navbar-default #phones .phone-order .phone-order-text {
+    font-size: 21px;
+    line-height: 24px;
+    width: 130px;
+    display: block;
+    white-space: normal; }
+  body .navbar-default .navbar-right {
+    width: 640px;
+    right: 200px; }
+    @media screen and (max-width: 768px) {
+      body .navbar-default .navbar-right {
+        width: 100%  !important;
+        right: 0px;
+        margin: 0 0 10px 0; } }
+    @media screen and (max-width: 468px) {
+      body .navbar-default .navbar-right {
+        width: 100%  !important;
+        right: 0px;
+        margin: 0 0 10px 0; } }
+    body .navbar-default .navbar-right li {
+      width: 25%;
+      text-align: center; }
+      @media screen and (max-width: 768px) {
+        body .navbar-default .navbar-right li {
+          width: 100%;
+          text-align: left; } }
+      @media screen and (max-width: 468px) {
+        body .navbar-default .navbar-right li {
+          width: 100%;
+          text-align: left; } }
+      body .navbar-default .navbar-right li.item-101 {
+        display: none; }
+      body .navbar-default .navbar-right li.dropdown:hover ul.dropdown-menu {
+        display: block; }
+        body .navbar-default .navbar-right li.dropdown:hover ul.dropdown-menu li a:before, body .navbar-default .navbar-right li.dropdown:hover ul.dropdown-menu li a:after {
+          content: none; }
+      @media screen and (max-width: 768px) {
+        body .navbar-default .navbar-right li.dropdown.dropdown:hover ul.dropdown-menu {
+          display: none; }
+          body .navbar-default .navbar-right li.dropdown.dropdown:hover ul.dropdown-menu li a:before, body .navbar-default .navbar-right li.dropdown.dropdown:hover ul.dropdown-menu li a:after {
+            content: none; } }
+      body .navbar-default .navbar-right li.dropdown ul {
+        margin: 0;
+        padding: 0; }
+        body .navbar-default .navbar-right li.dropdown ul.dropdown-menu {
+          margin: -1px 0 0;
+          padding: 0;
+          width: 100%;
+          border: none;
+          border-radius: 0;
+          box-shadow: 0 3px 3px #d5a957;
+          border-top: 1px dotted #727474; }
+          body .navbar-default .navbar-right li.dropdown ul.dropdown-menu li {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            text-align: left; }
+            body .navbar-default .navbar-right li.dropdown ul.dropdown-menu li:after {
+              content: '';
+              border-bottom: 1px dotted #ffdfa4;
+              display: block; }
+            body .navbar-default .navbar-right li.dropdown ul.dropdown-menu li:last-child:after {
+              content: none; }
+            body .navbar-default .navbar-right li.dropdown ul.dropdown-menu li a {
+              display: block;
+              width: 100%;
+              margin: 0;
+              padding: 11px 5px;
+              font-size: 17px; }
+              body .navbar-default .navbar-right li.dropdown ul.dropdown-menu li a:before, body .navbar-default .navbar-right li.dropdown ul.dropdown-menu li a:after {
+                content: none; }
+      body .navbar-default .navbar-right li.dropdown.active ul.dropdown-menu li a {
+        background-color: #ffdfa4;
+        color: #9b1a45; }
+      body .navbar-default .navbar-right li.dropdown.active ul.dropdown-menu li:hover a {
+        background-color: #9b1a45;
+        color: white; }
+      body .navbar-default .navbar-right li.active a {
+        background-color: #9b1a45;
+        color: white; }
+      body .navbar-default .navbar-right li.active:hover a {
+        background-color: #9b1a45;
+        color: white; }
+      body .navbar-default .navbar-right li a {
+        font-size: 24px;
+        font-weight: 400;
+        background-color: #ffdfa4;
+        color: #9b1a45; }
+        @media screen and (max-width: 468px) {
+          body .navbar-default .navbar-right li a {
+            padding: 19px 0 10px;
+            line-height: 10px; } }
+        body .navbar-default .navbar-right li a:hover {
+          background-color: #9b1a45;
+          color: white; }
+          body .navbar-default .navbar-right li a:hover span {
+            color: white !important; }
+        body .navbar-default .navbar-right li a span {
+          color: #9b1a45;
+          font-weight: 400;
+          font-size: 22px; }
+          @media screen and (max-width: 468px) {
+            body .navbar-default .navbar-right li a span {
+              padding: 0 0 0 15px; } }
+        body .navbar-default .navbar-right li a:after {
+          content: '';
+          display: block;
+          height: 40px;
+          position: absolute;
+          top: 5px;
+          right: 0px;
+          border-right: 1px dotted rgba(155, 26, 69, 0.24); }
+          @media screen and (max-width: 468px) {
+            body .navbar-default .navbar-right li a:after {
+              margin: 10px 0 0;
+              border: none;
+              height: 1px;
+              position: relative;
+              top: 10px;
+              right: 0;
+              border-bottom: 1px dotted rgba(155, 26, 69, 0.24); } }
+      @media screen and (max-width: 468px) {
+        body .navbar-default .navbar-right li:nth-child(1) a {
+          padding-top: 19px; } }
+      body .navbar-default .navbar-right li:nth-child(1) a:before {
+        content: '';
+        display: block;
+        height: 40px;
+        position: absolute;
+        top: 5px;
+        left: 0px;
+        border-left: 1px dotted rgba(155, 26, 69, 0.24); }
+        @media screen and (max-width: 468px) {
+          body .navbar-default .navbar-right li:nth-child(1) a:before {
+            display: none; } }
+      @media screen and (max-width: 468px) {
+        body .navbar-default .navbar-right li:nth-child(4) a:after {
+          display: none; } }
+
+/*# sourceMappingURL=top-menu.css.map */
