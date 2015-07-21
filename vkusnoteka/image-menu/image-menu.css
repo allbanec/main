@@ -1,0 +1,157 @@
+body .image-menu {
+  width: 1020px;
+  height: 190px;
+  display: block;
+  padding: 0;
+  margin: 70px auto 20px;
+  border: none; }
+  @media screen and (max-width: 468px) {
+    body .image-menu {
+      width: 94%;
+      height: auto;
+      margin: 120px auto 20px; } }
+  body .image-menu h2 {
+    display: block;
+    position: absolute;
+    left: 285px;
+    color: #d5a957;
+    margin: 0; }
+    @media screen and (max-width: 468px) {
+      body .image-menu h2 {
+        left: 0px;
+        text-align: center;
+        position: relative;
+        top: -50px; } }
+  body .image-menu .menu {
+    margin: 0;
+    padding: 0;
+    height: 190px;
+    display: block; }
+    body .image-menu .menu li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      float: left;
+      display: inline-block;
+      width: 145px;
+      height: 190px;
+      text-align: center; }
+      @media screen and (max-width: 468px) {
+        body .image-menu .menu li {
+          width: 50%; } }
+      body .image-menu .menu li.logo {
+        width: 250px;
+        height: 113px; }
+        @media screen and (max-width: 468px) {
+          body .image-menu .menu li.logo {
+            width: 100%;
+            height: 180px; } }
+        body .image-menu .menu li.logo a {
+          height: 113px; }
+        body .image-menu .menu li.logo img {
+          width: 225px;
+          height: 113px; }
+        body .image-menu .menu li.logo .phones {
+          display: block;
+          height: 48px;
+          margin: 15px 0 0; }
+          body .image-menu .menu li.logo .phones li {
+            width: 100%;
+            height: 24px;
+            display: block;
+            float: none; }
+            body .image-menu .menu li.logo .phones li span {
+              line-height: 24px;
+              font-weight: 500;
+              width: 100%;
+              display: block;
+              white-space: normal;
+              color: #9b1a45; }
+            body .image-menu .menu li.logo .phones li.phone-place {
+              display: block; }
+              body .image-menu .menu li.logo .phones li.phone-place .phone-number {
+                font-size: 24px; }
+            body .image-menu .menu li.logo .phones li.phone-order .phone-order-text {
+              font-size: 21px; }
+      body .image-menu .menu li:nth-child(2) a {
+        background: url("/img/image-menu/2.png") center 30px no-repeat; }
+        body .image-menu .menu li:nth-child(2) a.active {
+          background: url("/img/image-menu/2-2.png") center 30px no-repeat; }
+          body .image-menu .menu li:nth-child(2) a.active span {
+            color: #9b1a45; }
+      body .image-menu .menu li:nth-child(3) a {
+        background: url("/img/image-menu/3.png") center 30px no-repeat; }
+        body .image-menu .menu li:nth-child(3) a.active {
+          background: url("/img/image-menu/3-2.png") center 30px no-repeat; }
+          body .image-menu .menu li:nth-child(3) a.active span {
+            color: #9b1a45; }
+      body .image-menu .menu li:nth-child(4) a {
+        background: url("/img/image-menu/4.png") center 30px no-repeat; }
+        body .image-menu .menu li:nth-child(4) a.active {
+          background: url("/img/image-menu/4-2.png") center 30px no-repeat; }
+          body .image-menu .menu li:nth-child(4) a.active span {
+            color: #9b1a45; }
+      body .image-menu .menu li:nth-child(5) a {
+        background: url("/img/image-menu/5.png") center 30px no-repeat; }
+        body .image-menu .menu li:nth-child(5) a.active {
+          background: url("/img/image-menu/5-2.png") center 30px no-repeat; }
+          body .image-menu .menu li:nth-child(5) a.active span {
+            color: #9b1a45; }
+      body .image-menu .menu li:nth-child(6) a {
+        background: url("/img/image-menu/6.png") center 30px no-repeat; }
+        body .image-menu .menu li:nth-child(6) a.active {
+          background: url("/img/image-menu/6-2.png") center 30px no-repeat; }
+          body .image-menu .menu li:nth-child(6) a.active span {
+            color: #9b1a45; }
+      body .image-menu .menu li:nth-child(2):hover a {
+        background: url("/img/image-menu/2-2.png") center 30px no-repeat; }
+      body .image-menu .menu li:nth-child(2).VmOpen a {
+        background: url("/img/image-menu/2-2.png") center 30px no-repeat; }
+        body .image-menu .menu li:nth-child(2).VmOpen a span {
+          color: #9b1a45; }
+      body .image-menu .menu li:nth-child(3):hover a {
+        background: url("/img/image-menu/3-2.png") center 30px no-repeat; }
+      body .image-menu .menu li:nth-child(3).VmOpen a {
+        background: url("/img/image-menu/3-2.png") center 30px no-repeat; }
+        body .image-menu .menu li:nth-child(3).VmOpen a span {
+          color: #9b1a45; }
+      body .image-menu .menu li:nth-child(4):hover a {
+        background: url("/img/image-menu/4-2.png") center 30px no-repeat; }
+      body .image-menu .menu li:nth-child(4).VmOpen a {
+        background: url("/img/image-menu/4-2.png") center 30px no-repeat; }
+        body .image-menu .menu li:nth-child(4).VmOpen a span {
+          color: #9b1a45; }
+      body .image-menu .menu li:nth-child(5):hover a {
+        background: url("/img/image-menu/5-2.png") center 30px no-repeat; }
+      body .image-menu .menu li:nth-child(5).VmOpen a {
+        background: url("/img/image-menu/5-2.png") center 30px no-repeat; }
+        body .image-menu .menu li:nth-child(5).VmOpen a span {
+          color: #9b1a45; }
+      body .image-menu .menu li:nth-child(6):hover a {
+        background: url("/img/image-menu/6-2.png") center 30px no-repeat; }
+      body .image-menu .menu li:nth-child(6).VmOpen a {
+        background: url("/img/image-menu/6-2.png") center 30px no-repeat; }
+        body .image-menu .menu li:nth-child(6).VmOpen a span {
+          color: #9b1a45; }
+      body .image-menu .menu li a {
+        display: block;
+        width: 100%;
+        height: 185px;
+        position: relative; }
+        body .image-menu .menu li a:hover span {
+          color: #9b1a45; }
+        body .image-menu .menu li a span {
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+          right: 0px;
+          white-space: normal;
+          font-size: 20px;
+          line-height: 17px;
+          width: 110px;
+          margin: 0 auto;
+          display: block;
+          font-weight: 600;
+          color: #d5a957; }
+
+/*# sourceMappingURL=image-menu.css.map */

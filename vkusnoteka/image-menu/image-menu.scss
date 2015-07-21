@@ -1,0 +1,159 @@
+$colorWhite:rgba(255, 255, 255, 1);
+$colorGrays:rgba(114, 116, 116, 1);
+$colorPirog:rgba(255, 223, 164, 1);
+$colorPirogDark:rgba(213, 169, 87, 1);
+$colorVarenie:rgba(155, 26, 69, 1);
+
+$media: screen;
+$min: max-width;
+$max: max-width;
+$xsmall:468px;
+$small: 768px;
+body{
+  & .image-menu{
+    width: 1020px;
+    height: 190px;
+    display:block;
+    padding: 0;
+    margin: 70px auto 20px;
+    border: none;
+    @media #{$media} and ($max: $xsmall) {
+      width: 94%;
+      height:auto;
+      margin: 120px auto 20px;
+    }
+    & h2{
+      display: block;
+      position: absolute;
+      left: 285px;
+      color:$colorPirogDark;
+      margin:0;
+      @media #{$media} and ($max: $xsmall) {
+        left:0px;
+        text-align: center;
+        position:relative;
+        top: -50px;
+      }
+    }
+    & .menu{
+      margin:0;
+      padding:0;
+      height: 190px;
+      display:block;
+      & li{
+        margin:0;
+        padding:0;
+        list-style:none;
+        float:left;
+        display:inline-block;
+        width:145px;
+        height:190px;
+        text-align: center;
+        @media #{$media} and ($max: $xsmall) {
+          width: 50%;
+        }
+        &.logo{
+          width:250px;
+          height:113px;
+          @media #{$media} and ($max: $xsmall) {
+            width: 100%;
+            height:180px;
+          }
+          & a{
+            height: 113px;
+          }
+          & img{
+            width:225px;
+            height:113px;
+          }
+          & .phones{
+            display: block;
+            height:48px;
+            margin: 15px 0 0;
+            & li{
+              width: 100%;
+              height:24px;
+              display: block;
+              float: none;
+              & span{
+                line-height: 24px;
+                font-weight:500;
+                width: 100%;
+                display: block;
+                white-space: normal;
+                color:$colorVarenie;
+              }
+              &.phone-place{
+                display: block;
+                & .phone-number{
+                  font-size: 24px;
+                }
+              }
+              &.phone-order{
+                & .phone-order-text{
+                  font-size: 21px;
+                }
+              }
+            }
+
+          }
+        }
+        @for $i from 2 through 6{
+          &:nth-child(#{$i}){
+            & a{
+              background: url("/img/image-menu/#{$i}.png") center 30px no-repeat;
+              &.active  {
+                background: url("/img/image-menu/#{$i}-2.png") center 30px no-repeat;
+                & span{
+                  color:$colorVarenie;
+                }
+              }
+            }
+          }
+        }
+        @for $i from 2 through 6{
+          &:nth-child(#{$i}){
+            &:hover{
+              & a{
+                background: url("/img/image-menu/#{$i}-2.png") center 30px no-repeat;
+              }
+            }
+            &.VmOpen{
+              & a{
+                background: url("/img/image-menu/#{$i}-2.png") center 30px no-repeat;
+                & span{
+                  color:$colorVarenie;
+                }
+              }
+            }
+          }
+        }
+        & a{
+          display:block;
+          width:100%;
+          height:185px;
+          position:relative;
+          &:hover{
+            & span{
+              color:$colorVarenie;
+            }
+          }
+          & span{
+            position:absolute;
+            bottom:0px;
+            left:0px;
+            right:0px;
+            white-space: normal;
+            font-size: 20px;
+            line-height: 17px;
+            width: 110px;
+            margin: 0 auto;
+            display: block;
+            font-weight: 600;
+            color:$colorPirogDark;
+          }
+        }
+      }
+    }
+  }
+}
