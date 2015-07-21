@@ -2,12 +2,6 @@ $colorWhite:rgba(255, 255, 255, 1);
 $colorGrays:rgba(114, 116, 116, 1);
 $colorPirog:rgba(255, 223, 164, 1);
 $colorVarenie:rgba(155, 26, 69, 1);
-$colors:
-        (grays $colorGrays)
-        (white $colorWhite)
-        (pirog $colorPirog)
-        (varenie $colorVarenie)
-;
 
 $media: screen;
 $min: max-width;
