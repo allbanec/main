@@ -16,270 +16,283 @@ $colorGreen: rgba(42, 173, 108, 1);
 $colorSalat: rgba(120, 238, 15, 1);
 $colorTurquoise: rgba(26, 188, 156, 1);
 $colorRed: #D22625;
-
+@import url(http://fonts.googleapis.com/css?family=Fira+Sans:400,500,700,300,300italic,500italic,400italic,700italic&subset=latin,cyrillic);
 @-moz-keyframes salat-lamp-animaciya {
-  from {
-    box-shadow: 0px 0px 15px $colorSalat;
-    background-color: $colorSalat; }
-  to {
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0);
-    background-color: transparentize($colorSalat,0.7); }
+ from {
+  box-shadow:0 0 15px $colorSalat;
+  background-color: $colorSalat; }
+ to {
+  box-shadow:0 0 2px rgba(0, 0, 0, 0);
+  background-color: transparentize($colorSalat,0.7); }
 }
 
 @-webkit-keyframes salat-lamp-animaciya {
-  from {
-    box-shadow: 0px 0px 15px $colorSalat;
-    background-color: $colorSalat; }
-  to {
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0);
-    background-color: transparentize($colorSalat,0.7); }
+ from {
+  box-shadow:0 0 15px $colorSalat;
+  background-color: $colorSalat; }
+ to {
+  box-shadow:0 0 2px rgba(0, 0, 0, 0);
+  background-color: transparentize($colorSalat,0.7); }
 }
 @-ms-keyframes salat-lamp-animaciya {
-  from {
-    box-shadow: 0px 0px 15px $colorSalat;
-    background-color: $colorSalat; }
+ from {
+  box-shadow:0 0 15px $colorSalat;
+  background-color: $colorSalat; }
 
-  to {
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0);
-    background-color: transparentize($colorSalat,0.7); }
+ to {
+  box-shadow:0 0 2px rgba(0, 0, 0, 0);
+  background-color: transparentize($colorSalat,0.7); }
 }
 
+body {
+ color: $colorBlack;
+ overflow-x: hidden;
+ font: {
+  family: 'Fira Sans';
+  size: 18px;
+  weight: 300;
+ }
+;
+ margin: 0;
+ padding:30px 0 0;
+}
 .interface{
-  width:280px;
-  height:614px;
-  margin: 0 auto;
-  border:1px solid $colorBlack;
-  display:block;
-  background-color:rgba(61, 61, 63, 1);
-  & .dark{
-    background-color:rgba(38, 38, 40, 1);
-  }
-  & .line{
-    &.index{
+ width:280px;
+ height:620px;
+ margin: 0 auto;
+ border:1px solid $colorBlack;
+ display:block;
+ background-color:rgba(61, 61, 63, 1);
+ & .dark{
+  background-color:rgba(38, 38, 40, 1);
+ }
+ & .line{
+  &.index{
+   height:36px;
+   position:relative;
+   & div{
+    text-align:center;
+    padding: 0;
+   }
+   &.odd{
+    background-color:rgba(66, 70, 71, 1);
+   }
+   & .progress{
+    background-color:transparent;
+    width:90%;
+    height:36px;
+    padding:0;
+    margin:0;
+    box-shadow: none;
+    & .progress-line{
+     width:100%;
+     height:16px;
+     padding:0;
+     margin: 8px 0 0;
+     background-color:#BDC3C7;
+     & .progress-bar{
+      height: 16px;
+      &.call{
+       background-color:$colorGreen;
+      }
+      &.put{
+       background-color:$colorRed;
+      }
+     }
+    }
+   }
+   & span{
+    &.asset{
+     color:#ABC482;
+     font-size: 14px;
+     line-height: 36px;
+     font-weight: 500;
+    }
+    &.direction{
+     display: block;
+     width: 55px;
+     height: 36px;
+     margin: auto;
+     font-weight: 500;
+     &:before{
+      content:'';
+      background:url("call-put.png") 0 13px no-repeat;
+      float: left;
+      display:inline-block;
+      width:12px;
       height:36px;
+      margin:0;
       position:relative;
-      & div{
-        text-align:center;
-        padding: 0;
-      }
-      &.odd{
-        background-color:rgba(66, 70, 71, 1);
-      }
-      & .progress{
-        background-color:transparent;
-        width:90%;
-        height:36px;
-        padding:0;
-        margin:0;
-        box-shadow: none;
-        & .progress-line{
-          width:100%;
-          height:16px;
-          padding:0;
-          margin: 8px 0 0;
-          background-color:#BDC3C7;
-          & .progress-bar{
-            height: 16px;
-            &.call{
-              background-color:$colorGreen;
-            }
-            &.put{
-              background-color:$colorRed;
-            }
-          }
-        }
-      }
-      & span{
-        &.asset{
-          color:#ABC482;
-          font-size: 14px;
-          line-height: 36px;
-          font-weight: 500;
-        }
-        &.direction{
-          display: block;
-          width: 55px;
-          height: 36px;
-          margin: auto;
-          font-weight: 500;
-          &:before{
-            content:'';
-            float: left;
-            display:inline-block;
-            width:12px;
-            height:36px;
-            margin:0;
-            position:relative;
-          }
-          &:after{
-            display:inline-block;
-            font-size:16px;
-            line-height:36px;
-            margin:0 0 0 5px;
-            position:relative;
-            float: left;
-          }
-          &.put{
-            color:$colorRed;
-            &:before{
-              background:url("/img/call-put.png") 0 13px no-repeat;
-            }
-            &:after{
-              content:'PUT';
-            }
-          }
-          &.call{
-            color:$colorGreen;
-            &:before{
-              background:url("/img/call-put.png") -12px 12px no-repeat;
-            }
-            &:after{
-              content:'CALL';
-            }
-          }
-        }
-      }
-    }
-    &.logo{
-      height:70px;
-      background:rgba(38, 38, 40, 1) url("/img/interface-logo.png") center 10px no-repeat;
-    }
-    &.timer{
-      height:173px;
+     }
+     &:after{
+      display:inline-block;
+      font-size:16px;
+      line-height:36px;
+      margin:0 0 0 5px;
       position:relative;
-      & img{
-        display: block;
-        margin: 0 auto;
-        position: relative;
-        top: 10px;
-        &.spin {
-          -webkit-animation:  spin 2s infinite linear;
-          animation: spin 2s infinite linear;
-          -moz-animation: spin 2s infinite linear;
-          -ms-animation: spin 2s infinite linear;
-        }
+      float: left;
+     }
+     &.put{
+      color:$colorRed;
+      &:before{
+       background:url("call-put.png") 0 13px no-repeat;
       }
-      & span{
-        display: block;
-        color: #BDC3C7;
-        font-size: 12px;
-        line-height: 12px;
-        width: 100px;
-        position: absolute;
-        top: 47px;
-        margin: 0;
-        left: 103px;
+      &:after{
+       content:'PUT';
       }
-      .count-down{
-        width: 102px;
-        height: 20px;
-        padding: 0px;
-        text-align: center;
-        position: absolute;
-        top: 78px;
-        left: 90px;
-        & li {
-          position: relative;
-          list-style:none;
-          padding: 0;
-          display: inline-block;
-          margin: 0;
-          font-size:26px;
-          float:left;
-          width: auto;
-          color: $colorSalat;
-          font-weight: 500;
-        }
+     }
+     &.call{
+      color:$colorGreen;
+      &:before{
+       background:url("call-put.png") -12px 12px no-repeat;
       }
-
+      &:after{
+       content:'CALL';
+      }
+     }
     }
-    &.head{
-      height:36px;
-      & div{
-        text-align:center;
-        padding: 0;
-        & span{
-          color:#BDC3C7;
-          font-size: 16px;
-          line-height: 36px;
-          font-weight: 400;
-        }
-      }
-    }
-    &.action{
-      height:117px;
-      padding: 15px 0 0;
-      & p{
-        font-size: 12px;
-        color:#BDC3C7;
-        text-align: center;
-      }
-      & div{
-        padding:0 12px;
-        text-align:center;
-        & span{
-          &.text{
-            color:$colorWhite;
-            font-size: 12px;
-            display: block;
-            line-height: 14px;
-          }
-          &.icon{
-            width: 42px;
-            height: 42px;
-            border-radius: 26px;
-            display: block;
-            margin: 5px auto 0;
-            background-color: #262628;
-            & i{
-              color:#BDC3C7;
-              font-size: 32px;
-              margin: 5px 0 0;
-              &.fa-envelope{
-                font-size: 23px;
-                margin: 8px 0 0 1px;
-              }
-              &.mit-logo{
-                width: 42px;
-                height: 42px;
-                background: url("/img/small-interface-logo.png") center 10px no-repeat;
-                display: block;
-              }
-            }
-          }
-        }
-      }
-    }
-    &.indicator{
-      height:36px;
-      & span{
-        color: $colorSalat;
-        font-size: 12px;
-        font-weight: 500;
-        position: absolute;
-        top: 12px;
-        left: 30px;
-        &.fa-check{
-          left: 12px;
-          font-size: 16px;
-          top: 10px;
-        }
-        &.connection {
-          position: absolute;
-          bottom: 0;
-          top: 12px;
-          left: 10px;
-          display: inline-block;
-          width: 12px;
-          height: 12px;
-          border-radius: 6px;
-          margin: 0 5px 0 0;
-          -moz-animation: salat-lamp-animaciya 1s ease-in-out 1s infinite alternate;
-          -webkit-animation: salat-lamp-animaciya 1s ease-in-out 1s infinite alternate;
-          -ms-animation: salat-lamp-animaciya 1s ease-in-out 1s infinite alternate;
-        }
-      }
-
-    }
+   }
   }
+  &.logo{
+   height:70px;
+   background:rgba(38, 38, 40, 1) url("interface-logo.png") center 10px no-repeat;
+  }
+  &.timer{
+   height:173px;
+   position:relative;
+   & img{
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 10px;
+    &.spin {
+     -webkit-animation: spin 2s infinite linear;
+     animation: spin 2s infinite linear;
+     -moz-animation: spin 2s infinite linear;
+     -ms-animation: spin 2s infinite linear;
+    }
+   }
+   & span{
+    display: block;
+    color: #BDC3C7;
+    font-size: 12px;
+    line-height: 12px;
+    width: 100px;
+    position: absolute;
+    top: 47px;
+    margin: 0;
+    left: 103px;
+   }
+   .count-down{
+    width: 102px;
+    height: 20px;
+    padding:0;
+    text-align: center;
+    position: absolute;
+    top: 78px;
+    left: 90px;
+    & li {
+     position: relative;
+     list-style:none;
+     padding: 0;
+     display: inline-block;
+     margin: 0;
+     font-size:26px;
+     float:left;
+     width: auto;
+     color: $colorSalat;
+     font-weight: 500;
+    }
+   }
+
+  }
+  &.head{
+   height:36px;
+   & div{
+    text-align:center;
+    padding: 0;
+    & span{
+     color:#BDC3C7;
+     font-size: 16px;
+     line-height: 36px;
+     font-weight: 400;
+    }
+   }
+  }
+  &.action{
+   height:124px;
+   padding: 15px 0 0;
+   & p{
+    font-size: 12px;
+    color:#BDC3C7;
+    text-align: center;
+   }
+   & div{
+    padding:0 12px;
+    text-align:center;
+    & span{
+     &.text{
+      color:$colorWhite;
+      font-size: 12px;
+      display: block;
+      line-height: 14px;
+     }
+     &.icon{
+      width: 42px;
+      height: 42px;
+      border-radius: 26px;
+      display: block;
+      margin: 5px auto 0;
+      background-color: #262628;
+      & i{
+       color:#BDC3C7;
+       font-size: 32px;
+       margin: 5px 0 0;
+       &.fa-envelope{
+        font-size: 23px;
+        margin: 8px 0 0 1px;
+       }
+       &.mit-logo{
+        width: 42px;
+        height: 42px;
+        background: url("small-interface-logo.png") center 10px no-repeat;
+        display: block;
+       }
+      }
+     }
+    }
+   }
+  }
+  &.indicator{
+   height:36px;
+   & span{
+    color: $colorSalat;
+    font-size: 12px;
+    font-weight: 500;
+    position: absolute;
+    top: 12px;
+    left: 30px;
+    &.fa-check{
+     left: 12px;
+     font-size: 16px;
+     top: 10px;
+    }
+    &.connection {
+     position: absolute;
+     bottom: 0;
+     top: 12px;
+     left: 10px;
+     display: inline-block;
+     width: 12px;
+     height: 12px;
+     border-radius: 6px;
+     margin: 0 5px 0 0;
+     -moz-animation: salat-lamp-animaciya 1s ease-in-out 1s infinite alternate;
+     -webkit-animation: salat-lamp-animaciya 1s ease-in-out 1s infinite alternate;
+     -ms-animation: salat-lamp-animaciya 1s ease-in-out 1s infinite alternate;
+    }
+   }
+
+  }
+ }
 }
