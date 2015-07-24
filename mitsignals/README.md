@@ -1,6 +1,5 @@
-# main
-## Big Repository
- There is main repository part. 
- Projects are in the project folders. 
+# MiTsignals
+## Binary options project interfaces
+ Some interesting interfaces for landing pages
 
 

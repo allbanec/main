@@ -1,0 +1,212 @@
+@-moz-keyframes salat-lamp-animaciya {
+  from {
+    box-shadow: 0px 0px 15px #78ee0f;
+    background-color: #78ee0f; }
+  to {
+    box-shadow: 0px 0px 2px transparent;
+    background-color: rgba(120, 238, 15, 0.3); } }
+@-webkit-keyframes salat-lamp-animaciya {
+  from {
+    box-shadow: 0px 0px 15px #78ee0f;
+    background-color: #78ee0f; }
+  to {
+    box-shadow: 0px 0px 2px transparent;
+    background-color: rgba(120, 238, 15, 0.3); } }
+@-ms-keyframes salat-lamp-animaciya {
+  from {
+    box-shadow: 0px 0px 15px #78ee0f;
+    background-color: #78ee0f; }
+  to {
+    box-shadow: 0px 0px 2px transparent;
+    background-color: rgba(120, 238, 15, 0.3); } }
+.interface {
+  width: 280px;
+  height: 614px;
+  margin: 0 auto;
+  border: 1px solid black;
+  display: block;
+  background-color: #3d3d3f; }
+  .interface .dark {
+    background-color: #262628; }
+  .interface .line.index {
+    height: 36px;
+    position: relative; }
+    .interface .line.index div {
+      text-align: center;
+      padding: 0; }
+    .interface .line.index.odd {
+      background-color: #424647; }
+    .interface .line.index .progress {
+      background-color: transparent;
+      width: 90%;
+      height: 36px;
+      padding: 0;
+      margin: 0;
+      box-shadow: none; }
+      .interface .line.index .progress .progress-line {
+        width: 100%;
+        height: 16px;
+        padding: 0;
+        margin: 8px 0 0;
+        background-color: #BDC3C7; }
+        .interface .line.index .progress .progress-line .progress-bar {
+          height: 16px; }
+          .interface .line.index .progress .progress-line .progress-bar.call {
+            background-color: #2aad6c; }
+          .interface .line.index .progress .progress-line .progress-bar.put {
+            background-color: #D22625; }
+    .interface .line.index span.asset {
+      color: #ABC482;
+      font-size: 14px;
+      line-height: 36px;
+      font-weight: 500; }
+    .interface .line.index span.direction {
+      display: block;
+      width: 55px;
+      height: 36px;
+      margin: auto;
+      font-weight: 500; }
+      .interface .line.index span.direction:before {
+        content: '';
+        float: left;
+        display: inline-block;
+        width: 12px;
+        height: 36px;
+        margin: 0;
+        position: relative; }
+      .interface .line.index span.direction:after {
+        display: inline-block;
+        font-size: 16px;
+        line-height: 36px;
+        margin: 0 0 0 5px;
+        position: relative;
+        float: left; }
+      .interface .line.index span.direction.put {
+        color: #D22625; }
+        .interface .line.index span.direction.put:before {
+          background: url("/img/call-put.png") 0 13px no-repeat; }
+        .interface .line.index span.direction.put:after {
+          content: 'PUT'; }
+      .interface .line.index span.direction.call {
+        color: #2aad6c; }
+        .interface .line.index span.direction.call:before {
+          background: url("/img/call-put.png") -12px 12px no-repeat; }
+        .interface .line.index span.direction.call:after {
+          content: 'CALL'; }
+  .interface .line.logo {
+    height: 70px;
+    background: #262628 url("/img/interface-logo.png") center 10px no-repeat; }
+  .interface .line.timer {
+    height: 173px;
+    position: relative; }
+    .interface .line.timer img {
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      top: 10px; }
+      .interface .line.timer img.spin {
+        -webkit-animation: spin 2s infinite linear;
+        animation: spin 2s infinite linear;
+        -moz-animation: spin 2s infinite linear;
+        -ms-animation: spin 2s infinite linear; }
+    .interface .line.timer span {
+      display: block;
+      color: #BDC3C7;
+      font-size: 12px;
+      line-height: 12px;
+      width: 100px;
+      position: absolute;
+      top: 47px;
+      margin: 0;
+      left: 103px; }
+    .interface .line.timer .count-down {
+      width: 102px;
+      height: 20px;
+      padding: 0px;
+      text-align: center;
+      position: absolute;
+      top: 78px;
+      left: 90px; }
+      .interface .line.timer .count-down li {
+        position: relative;
+        list-style: none;
+        padding: 0;
+        display: inline-block;
+        margin: 0;
+        font-size: 26px;
+        float: left;
+        width: auto;
+        color: #78ee0f;
+        font-weight: 500; }
+  .interface .line.head {
+    height: 36px; }
+    .interface .line.head div {
+      text-align: center;
+      padding: 0; }
+      .interface .line.head div span {
+        color: #BDC3C7;
+        font-size: 16px;
+        line-height: 36px;
+        font-weight: 400; }
+  .interface .line.action {
+    height: 117px;
+    padding: 15px 0 0; }
+    .interface .line.action p {
+      font-size: 12px;
+      color: #BDC3C7;
+      text-align: center; }
+    .interface .line.action div {
+      padding: 0 12px;
+      text-align: center; }
+      .interface .line.action div span.text {
+        color: white;
+        font-size: 12px;
+        display: block;
+        line-height: 14px; }
+      .interface .line.action div span.icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 26px;
+        display: block;
+        margin: 5px auto 0;
+        background-color: #262628; }
+        .interface .line.action div span.icon i {
+          color: #BDC3C7;
+          font-size: 32px;
+          margin: 5px 0 0; }
+          .interface .line.action div span.icon i.fa-envelope {
+            font-size: 23px;
+            margin: 8px 0 0 1px; }
+          .interface .line.action div span.icon i.mit-logo {
+            width: 42px;
+            height: 42px;
+            background: url("/img/small-interface-logo.png") center 10px no-repeat;
+            display: block; }
+  .interface .line.indicator {
+    height: 36px; }
+    .interface .line.indicator span {
+      color: #78ee0f;
+      font-size: 12px;
+      font-weight: 500;
+      position: absolute;
+      top: 12px;
+      left: 30px; }
+      .interface .line.indicator span.fa-check {
+        left: 12px;
+        font-size: 16px;
+        top: 10px; }
+      .interface .line.indicator span.connection {
+        position: absolute;
+        bottom: 0;
+        top: 12px;
+        left: 10px;
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 6px;
+        margin: 0 5px 0 0;
+        -moz-animation: salat-lamp-animaciya 1s ease-in-out 1s infinite alternate;
+        -webkit-animation: salat-lamp-animaciya 1s ease-in-out 1s infinite alternate;
+        -ms-animation: salat-lamp-animaciya 1s ease-in-out 1s infinite alternate; }
+
+/*# sourceMappingURL=style.css.map */
