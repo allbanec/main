@@ -4,13 +4,13 @@
  
  What we have as prototype?
  
- ![MITsignals interface prototype](main/mitsignals/interface/interface.png)
+ ![MITsignals interface prototype](interface.png)
  
  OK!
  
  I started with Yii framework(we use it in our projects)... made landing, routing, bla-bla-bla...
  
- You can see the result in [interface preview page](main/mitsignals/interface/index.php)  
+ You can see the result in [interface preview page](index.php)  
  
 
 
