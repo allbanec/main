@@ -1,0 +1,11 @@
+.progress {
+  background: transparent url(img/pairs-progress-bg.jpg) 0 0 no-repeat;
+  width: 118px;
+  height: 30px;
+  margin: 10px auto;
+  border: none;
+  border-radius: 0; }
+  .progress .progress-bar-success {
+    background: transparent url(img/pairs-progress.jpg) 0 0 no-repeat; }
+
+/*# sourceMappingURL=style.css.map */
