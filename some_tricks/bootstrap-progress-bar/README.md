@@ -1,4 +1,4 @@
-# botstrap progress bar
+# bootstrap progress bar
 ## Progress Bar
 In our project sometimes we use progress bars.
 
