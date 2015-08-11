@@ -17,14 +17,27 @@
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg); } }
 .circle {
-  width: 152px;
-  height: 152px;
-  position: relative; }
+  position: relative;
+  margin: 50px;
+  float: left; }
+  .circle.one {
+    width: 152px;
+    height: 152px; }
+  .circle.two {
+    width: 340px;
+    height: 340px; }
   .circle img {
     display: block;
     margin: 0 auto;
     position: relative;
     top: 10px; }
+    .circle img.dot {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 5px; }
     .circle img.spin {
       -webkit-animation: spin  2s infinite linear;
       animation: spin 2s infinite linear;

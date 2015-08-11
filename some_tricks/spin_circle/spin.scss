@@ -22,15 +22,32 @@
     transform: rotate(359deg);
   }
 }
- .circle{
-   width:152px;
-   height:152px;
-   position:relative;
+//1_version
+.circle{
+  position:relative;
+  margin: 50px;
+  float: left;
+  &.one{
+    width:152px;
+    height:152px;
+  }
+  &.two{
+    width:340px;
+    height:340px;
+  }
   & img{
     display: block;
     margin: 0 auto;
     position: relative;
     top: 10px;
+    &.dot{//2_version
+      width:20px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 5px;
+    }
     &.spin {
       -webkit-animation:  spin  2s infinite linear;
       animation: spin 2s infinite linear;

@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="circle">
-    <img src="circle-black.png" alt="circle" class="spin"/>
+    <img src="color-circle.png" alt="circle" class="spin"/>
 </div>
 </body>
 </html>
