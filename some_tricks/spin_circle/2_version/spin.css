@@ -16,6 +16,30 @@
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg); } }
+@-moz-keyframes timer {
+  from {
+    border-color: #4F5563;
+    background: #4F5563; }
+  to {
+    box-shadow: 0 0 25px #75C6F1;
+    border-color: #75C6F1;
+    background: #75C6F1; } }
+@-webkit-keyframes timer {
+  from {
+    border-color: #4F5563;
+    background: #4F5563; }
+  to {
+    box-shadow: 0 0 25px #75C6F1;
+    border-color: #75C6F1;
+    background: #75C6F1; } }
+@-ms-keyframes timer {
+  from {
+    border-color: #4F5563;
+    background: #4F5563; }
+  to {
+    box-shadow: 0 0 25px #75C6F1;
+    border-color: #75C6F1;
+    background: #75C6F1; } }
 .circle {
   width: 340px;
   height: 340px;
@@ -31,12 +55,21 @@
       animation: spin 2s infinite linear;
       -moz-animation: spin 2s infinite linear;
       -ms-animation: spin 2s infinite linear; }
-    .circle img.dot {
-      width: 20px;
-      height: 20px;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 5px; }
+  .circle span.dot {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5px;
+    border-radius: 10px;
+    border: 3px solid #4F5563;
+    background: #4F5563;
+    -moz-animation: timer 1s ease-in-out 1s infinite alternate;
+    -webkit-animation: timer 1s ease-in-out 1s infinite alternate;
+    -ms-animation: timer 1s ease-in-out 1s infinite alternate; }
 
 /*# sourceMappingURL=spin.css.map */

@@ -1,3 +1,7 @@
+$colorFireBlue:#75C6F1;
+$colorLineGray:#4F5563;
+$colorDark:#2E313A;
+
 .spin {
   -webkit-animation:  spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
@@ -22,6 +26,41 @@
     transform: rotate(359deg);
   }
 }
+
+@-moz-keyframes timer {//2_version
+  from {
+    border-color: $colorLineGray;
+    background:$colorLineGray;
+  }
+  to {
+    box-shadow: 0 0 25px $colorFireBlue;
+    border-color: $colorFireBlue;
+    background:$colorFireBlue;
+  }
+}
+@-webkit-keyframes timer {//2_version
+  from {
+    border-color: $colorLineGray;
+    background:$colorLineGray;
+  }
+  to {
+    box-shadow: 0 0 25px $colorFireBlue;
+    border-color: $colorFireBlue;
+    background:$colorFireBlue;
+  }
+}
+@-ms-keyframes timer {//2_version
+  from {
+    border-color: $colorLineGray;
+    background:$colorLineGray;
+  }
+  to {
+    box-shadow: 0 0 25px $colorFireBlue;
+    border-color: $colorFireBlue;
+    background:$colorFireBlue;
+  }
+}
+
 //1_version
 .circle{
   position:relative;
@@ -40,19 +79,30 @@
     margin: 0 auto;
     position: relative;
     top: 10px;
-    &.dot{//2_version
-      width:20px;
-      height: 20px;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 5px;
-    }
     &.spin {
       -webkit-animation:  spin  2s infinite linear;
       animation: spin 2s infinite linear;
       -moz-animation: spin 2s infinite linear;
       -ms-animation: spin 2s infinite linear;
+    }
+  }
+  & span{
+    &.dot{//2_version
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      width:14px;
+      height: 14px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 5px;
+      border-radius:10px;
+      border:3px solid $colorLineGray;
+      background:$colorLineGray;
+      -moz-animation: timer 1s ease-in-out 1s infinite alternate;
+      -webkit-animation: timer 1s ease-in-out 1s infinite alternate;
+      -ms-animation: timer 1s ease-in-out 1s infinite alternate;
     }
   }
 }

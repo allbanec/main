@@ -18,7 +18,7 @@
 </div>
 <div class="circle two">
     <img src="timer.png" alt="circle" class="spin"/>
-    <img src="point.png" alt="dot" class="dot"/>
+    <span class="dot"></span>
 </div>
 </body>
 </html>

@@ -14,8 +14,8 @@
 </head>
 <body>
 <div class="circle">
-    <img src="timer.png" alt="circle" class="spin"/>
-    <img src="point.png" alt="dot" class="dot"/>
+    <img src="/img/timer.png" alt="Circle Timer" class="circle-timer fa-spin"/>
+    <span class="dot"></span>
 </div>
 </body>
 </html>
