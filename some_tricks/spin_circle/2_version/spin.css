@@ -17,17 +17,26 @@
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg); } }
 .circle {
-  height: 173px;
-  background: url("circle.png") center 10px no-repeat; }
+  width: 340px;
+  height: 340px;
+  position: relative; }
   .circle img {
     display: block;
     margin: 0 auto;
     position: relative;
-    top: 10px; }
+    top: 10px;
+    width: 316px; }
     .circle img.spin {
-      -webkit-animation: spin  2s infinite linear;
+      -webkit-animation: spin 2s infinite linear;
       animation: spin 2s infinite linear;
       -moz-animation: spin 2s infinite linear;
       -ms-animation: spin 2s infinite linear; }
+    .circle img.dot {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 5px; }
 
 /*# sourceMappingURL=spin.css.map */
