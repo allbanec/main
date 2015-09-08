@@ -15,7 +15,7 @@
 
  OK!
 
- I use SASS for my style. But you can see CSS file only if you need.
+ I use SCSS for my style. But you can see CSS file only if you need.
 
  I blocked standard Bootstrap Switch CSS and change it in my SCSS file and put inside two new blocks with ON and OFF labels...
 
