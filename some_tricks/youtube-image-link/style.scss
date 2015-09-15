@@ -1,0 +1,33 @@
+body {
+  & .video {
+    width: 853px;
+    margin: 150px auto 0;
+    cursor: pointer;
+    clear: both;
+    float: none;
+    & a{
+      width: 853px;
+      display: block;
+      height: 480px;
+    }
+    & .fa {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 162px;
+      top: 315px;
+      &:before {
+        font-size: 188px;
+        color: rgba(255,255,255,.8);
+      }
+    }
+    &:hover {
+      & .fa {
+        &:before {
+          color: rgba(255,255,255,1);
+        }
+      }
+    }
+  }
+}
