@@ -13,10 +13,10 @@ OK!
 
 1. You need to make a link:
 
-    <a class="intro-video" data-video-block="#video" data-video-id="M7FIvfx5J10" data-video-width="853" data-video-height="480"  data-video-title="Your Video Title">
-        <img src="../img/video.jpg" alt="Your Video Alt />
-        <i class="fa fa-play-circle"></i>
-    </a>
+        <a class="intro-video" data-video-block="#video" data-video-id="M7FIvfx5J10" data-video-width="853" data-video-height="480"  data-video-title="Your Video Title">
+            <img src="../img/video.jpg" alt="Your Video Alt />
+            <i class="fa fa-play-circle"></i>
+        </a>
 
 
 There:
