@@ -16,16 +16,16 @@
  Like everytime we need something more...
 
 1. We have three modules and we need one of them active only.
-
 We use switch to power on/off.
 
-2. We have investment slider with preloaded value.
 
+2. We have investment slider with preloaded value.
 Use slider to change the investment value.
 
-3. If module is disabled the switch and the slider are disabled and the color for all elements is "gray".
 
+3. If module is disabled the switch and the slider are disabled and the color for all elements is "gray".
 ![active](img/active.jpg "active module")
 ![disabled](img/disabled.jpg "disabled module")
+
 
 4. We change the body class for the background image
