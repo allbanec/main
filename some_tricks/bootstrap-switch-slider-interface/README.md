@@ -6,8 +6,9 @@
  OK!
 
  We use Bootstrap:
- Slider and Switch
+
  [Bootstrap Slider](https://github.com/seiyria/bootstrap-slider/)
+
  [Bootstrap Switch](https://github.com/nostalgiaz/bootstrap-switch)
 
  thank you for the owners!
