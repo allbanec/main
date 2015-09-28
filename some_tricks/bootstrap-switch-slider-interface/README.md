@@ -25,7 +25,7 @@ Use slider to change the investment value.
 
 3. If module is disabled the switch and the slider are disabled and the color for all elements is "gray".
 
-![active](../img/active.jpg "active module")
-![disabled](../img/disabled.jpg "disabled module")
+![active](img/active.jpg "active module")
+![disabled](img/disabled.jpg "disabled module")
 
 4. We change the body class for the background image
