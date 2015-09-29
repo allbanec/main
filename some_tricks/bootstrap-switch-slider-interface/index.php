@@ -127,7 +127,7 @@
             </div>
         </div>
     </div>
-</div> 
+</div>
 <script>
     $("body").addClass("collect");
     $("[name='switch']").bootstrapSwitch().on('switchChange.bootstrapSwitch', function() {
