@@ -125,36 +125,32 @@
                 <div class="on-switch switcher button-on">ВКЛ</div>
                 <div class="on-switch switcher button-off active">ВЫКЛ</div>
             </div>
-            <?php /* */ ?>
-            <script>
-                $("[name='switch']").bootstrapSwitch().on('switchChange.bootstrapSwitch', function() {
-                    $(".panel").removeClass("active",function() {
-                        // $(".slider-input").bootstrapSlider('setValue', 0)
-                    });
-                    //  $(".money").text(0);
-                    $(".button-on").removeClass("active");
-                    $(".button-off").addClass("active");
-                    $("body").removeClass();
-                });
-                $("body").addClass("safe");
-                $(".safe #safe").bootstrapSwitch().on('switchChange.bootstrapSwitch', function() {
-                    $(".safe .on-switch").toggleClass("active");
-                    $(".panel.safe").addClass("active");
-                    $("body").addClass("safe");
-                });
-                $(".collect #collect").bootstrapSwitch().on('switchChange.bootstrapSwitch', function() {
-                    $(".collect .on-switch").toggleClass("active");
-                    $(".panel.collect").addClass("active");
-                    $("body").addClass("collect");
-                });
-                $(".earn #earn").bootstrapSwitch().on('switchChange.bootstrapSwitch', function() {
-                    $(".earn .on-switch").toggleClass("active");
-                    $(".panel.earn").addClass("active");
-                    $("body").addClass("earn");
-                });
-            </script>
         </div>
     </div>
-</div>
+</div> 
+<script>
+    $("body").addClass("collect");
+    $("[name='switch']").bootstrapSwitch().on('switchChange.bootstrapSwitch', function() {
+        $(".panel").removeClass("active");
+        $(".button-on").removeClass("active");
+        $(".button-off").addClass("active");
+        $("body").removeClass();
+    });
+    $(".safe #safe").bootstrapSwitch().on('switchChange.bootstrapSwitch', function() {
+        $(".safe .on-switch").toggleClass("active");
+        $(".panel.safe").addClass("active");
+        $("body").addClass("safe");
+    });
+    $(".collect #collect").bootstrapSwitch().on('switchChange.bootstrapSwitch', function() {
+        $(".collect .on-switch").toggleClass("active");
+        $(".panel.collect").addClass("active");
+        $("body").addClass("collect");
+    });
+    $(".earn #earn").bootstrapSwitch().on('switchChange.bootstrapSwitch', function() {
+        $(".earn .on-switch").toggleClass("active");
+        $(".panel.earn").addClass("active");
+        $("body").addClass("earn");
+    });
+</script>
 </body>
 </html>
