@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <title>ROTATION 2</title>
+    <title>YOUTUBE IMAGE LINK</title>
     <meta name="Keywords" content="" />
     <meta name="Description" content="" />
     <meta name="language" content="en_US" />
@@ -31,7 +31,7 @@
             "use strict";
             $element.html('<iframe width="'+width+'" height="'+height+'" src="https://www.youtube.com/embed/'+vcode+'?autoplay=1&loop=1&rel=0&amp;controls=0&amp;showinfo=0&wmode=transparent&origin=https://algomonster.com" frameborder="0" allowfullscreen wmode="Opaque"></iframe>');
 
-        };
+        }
     </script>
 </div>
 </body>
