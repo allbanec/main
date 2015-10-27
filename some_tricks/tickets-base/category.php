@@ -1,7 +1,14 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Reskator
- * Date: 27.10.2015
- * Time: 10:23
- */
+ INSERT INTO `category`(`title`, `slug`) VALUES ('Балкон, 16 ряд','balkon-16');
+ INSERT INTO `category`(`title`, `slug`) VALUES ('Амфитеатр, 40 ряд','amphiteatr-40');
+ INSERT INTO `category`(`title`, `slug`) VALUES ('Балкон, 2 ряд','balkon-2');
+ INSERT INTO `category`(`title`, `slug`) VALUES ('Партер, 40 ряд','parter-40');
+ INSERT INTO `category`(`title`, `slug`) VALUES ('Амфитеатр, 33 ряд','amphiteatr-33');
+ INSERT INTO `category`(`title`, `slug`) VALUES ('Партер, 15 ряд','parter-15');
+ INSERT INTO `category`(`title`, `slug`) VALUES ('Партер, 12 ряд','parter-12');
+ INSERT INTO `category`(`title`, `slug`) VALUES ('Партер, 9 ряд','parter-9');
+ INSERT INTO `category`(`title`, `slug`) VALUES ('Партер, 3 ряд','parter-3');
+ INSERT INTO `category`(`title`, `slug`) VALUES ('Партер, 7 ряд','parter-7');
+ INSERT INTO `category`(`title`, `slug`) VALUES ('Партер, 2 ряд','parter-2');
+ INSERT INTO `category`(`title`, `slug`) VALUES ('Партер, 6 ряд','parter-6');
+ INSERT INTO `category`(`title`, `slug`) VALUES ('Партер, 4 ряд','parter-4');
+ INSERT INTO `category`(`title`, `slug`) VALUES ('Партер, 5 ряд','parter-5');
