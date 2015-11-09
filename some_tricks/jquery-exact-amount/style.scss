@@ -1,0 +1,168 @@
+$colorBlack: rgba(0,0,0,1);
+$colorWhite: rgba(255,255,255,1);
+$colorDarkGray: #2C2C2C;
+$colorSilver: rgba(189, 195, 199, 1);
+$colorGray:rgba(44, 44, 44, 1);
+$colorLightGray:#F9FAFC;
+$colorLightGreen:#44D554;
+$colorOrange:#FA8100;
+$colorLightBlue: #EEF5FD;
+$colorMiddleBlue: #EFF3F4;
+$colorDeepBlue: #E5E9EA;
+$colorDarkBlue: #597894;
+$colorLightBlack:#4D5763;
+$colorWhite: rgba(255, 255, 255, 1);
+$colorSky: rgba(29, 190, 207, 1);
+$colorBlue: #0B97D5;
+$colorDark: rgba(88, 88, 90, 1);
+$colorAsbestos:#717171;
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=latin,cyrillic);
+*{
+  margin:0;
+  padding:0;
+  font:{
+    family: 'Roboto', sans-serif;
+    weight: 300;
+  };
+  color:$colorAsbestos;
+  line-height: 27px;
+}
+body{
+  & .content{
+    width: 960px;
+    padding:10%;
+    z-index: 9;
+      & .panel-body{
+        background-color: $colorLightGray;
+        border:1px solid transparentize($colorSilver, 0.7);
+        padding: 20px;
+        margin:10px  auto;
+        position: relative;
+        &.calculator{
+          padding: 20px;
+          background-color: $colorMiddleBlue;
+          & .roller{
+            display: block;
+            height: 80px;
+            position: relative;
+            top: 20px;
+            margin: 0 auto;
+          }
+        }
+        & h2{
+          color:$colorDarkBlue;
+          font-weight: 400;
+          font-size:24px;
+          padding:0;
+          margin:0 0 10px;
+          display:inline-block;
+        }
+        & p, & label{
+          margin:0;
+          font-size: 18px;
+          line-height: 20px;
+          font-weight: 300;
+          color:$colorAsbestos;
+        }
+        &.calculator{
+          padding: 20px;
+          background-color: $colorMiddleBlue;
+          & .quantity{
+            display: inline-block;
+            margin: 0 0 0 15px;
+            background-color: white;
+            padding: 3px;
+            height: 34px;
+            border-radius: 5px;
+            border:1px solid transparentize($colorSilver, 0.2);
+            box-shadow:inset -1px 1px 2px transparentize($colorSilver, 0.1);
+            position: relative;
+            & i{
+              font-size:18px;
+              line-height: 26px;
+              text-align: center;
+              height: 26px;
+              width: 26px;
+              color: $colorAsbestos;
+              box-shadow:0 1px 1px transparentize($colorSilver, 0.1);
+              background: $colorWhite;
+              border-radius: 3px;
+              font-style: normal;
+              cursor: pointer;
+              position: relative;
+              outline: none;
+
+              background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(234,234,234,1) 100%); /* FF3.6+ */
+              background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(234,234,234,1))); /* Chrome,Safari4+ */
+              background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(234,234,234,1) 100%); /* Chrome10+,Safari5.1+ */
+              background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(234,234,234,1) 100%); /* Opera 11.10+ */
+              background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(234,234,234,1) 100%); /* IE10+ */
+              background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(234,234,234,1) 100%); /* W3C */
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#eaeaea',GradientType=0 ); /* IE6-9 */
+
+              &.disabled{
+                pointer-events: none;
+                color: $colorDeepBlue;
+                background: none;
+                box-shadow:none;
+                border:1px solid $colorDeepBlue;
+                &:before, &:after{
+                  display: block;
+                  width: 150px;
+                  height: 34px;
+                  line-height: 34px;
+                  font-size: 18px;
+                  font-weight: 400;
+                  position: absolute;
+                  top: -5px;
+                  border-radius: 5px;
+                  color:opacify($colorOrange, 0.3);
+                  background-color:transparentize($colorOrange, 0.8);
+                  border-top:1px solid transparentize($colorSilver, 0.15);
+                  border-right:1px solid transparentize($colorSilver, 0.15);
+                  border-bottom:1px solid transparentize($colorWhite, 0.15);
+                  border-left:1px solid transparentize($colorWhite, 0.15);
+                  box-shadow:inset -2px 2px 3px transparentize($colorSilver, 0.7);
+                  -webkit-box-shadow: inset -2px 2px 3px transparentize($colorSilver, 0.7);
+                  -moz-box-shadow: inset -2px 2px 3px transparentize($colorSilver, 0.7);
+                }
+              }
+              &.plus{
+                float: right;
+                &.disabled{
+                  &:after{
+                    content: 'MAX AMOUNT';
+                    right: -165px;
+                  }
+                }
+              }
+              &.minus{
+                float: left;
+                &.disabled{
+                  &:after{
+                    content: 'MIN AMOUNT';
+                    right: -252px;
+                  }
+                }
+              }
+              &:active{
+                top:1px;
+              }
+            }
+            & input{
+              width: 60px;
+              font-size: 18px;
+              line-height: 28px;
+              font-weight: 500;
+              text-align: center;
+              border: none;
+              background-color: transparent;
+              padding:0;
+              color:$colorAsbestos;
+              pointer-events: none;
+            }
+          }
+        }
+      }
+  }
+}
