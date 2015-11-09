@@ -1,0 +1,340 @@
+$colorBlack: rgba(0,0,0,1);
+$colorWhite: rgba(255,255,255,1);
+$colorGray: #ccc;
+$colorLightGray: #D6D6D6;
+$colorDarkGray: #666;
+$colorBlue: #0075b5;
+$colorOrange: #FF6600;
+
+$media: screen;
+$min: max-width;
+$max: max-width;
+$small:360px;
+$middle: 640px;
+$normal:768px;
+$big: 1024px;
+$large: 1280px;
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700,300&subset=latin,cyrillic);
+*{
+  margin:0;
+  padding:0;
+  font:{
+    family: 'Fira Sans', sans-serif;
+    size:18px;
+    weight: 300;
+  };
+  color:$colorBlack;
+  line-height: 27px;
+  outline:none;
+}
+body {
+  background-color: $colorBlack;
+  width: 100%;
+  max-width: 1920px;
+  overflow-x: hidden;
+  & .calculator {
+    width: 960px;
+    margin: 100px auto;
+    position: relative;
+    overflow: hidden;
+    padding: 50px;
+    background-color: $colorGray;
+      @media #{$media} and ($max: $normal) {
+        width: 100%;
+      }
+      @media #{$media} and ($max: $middle) {
+        padding:30px;
+      }
+    & .tab-content {
+      position: relative;
+      z-index: 1;
+      & .tab-pane {
+        height: 285px;
+        padding: 40px;
+        @media #{$media} and ($max: $normal) {
+          padding: 20px;
+        }
+        &.active {
+          border: 1px solid $colorDarkGray;
+          background-color: #D6D6D6;
+          & h3 {
+            color: $colorDarkGray;
+            font-size: 28px;
+            font-weight: 500;
+            margin: 0;
+            width: 100%;
+            & small {
+              color: $colorBlue;
+              font-size: 36px;
+              font-weight: 500;
+              float: right;
+              &:before {
+                content: '~';
+                color: $colorBlue;
+                display: inline-block;
+                font-size: 28px;
+              }
+            }
+          }
+        }
+        & .calculation {
+          margin: 50px auto 0;
+          @media #{$media} and ($max: $normal) {
+            margin:10px 0 0;
+          }
+          & div {
+            height: 41px;
+            line-height: 41px;
+            margin: 0 0 20px;
+            @media #{$media} and ($max: $normal) {
+              margin:0;
+            }
+            &:nth-child(1), &:nth-child(3) {
+              padding: 0;
+            }
+            &.time-progresses {
+              &:before, &:after {
+                content: '|';
+                display: block;
+                position: absolute;
+                top: -30px;
+                font-size: 12px;
+                color: $colorDarkGray;
+              }
+              &:before {
+                right: auto;
+                left: 50px;
+              }
+              &:after {
+                right: 50px;
+                left: auto;
+              }
+            }
+            &.deposit-progresses {
+              &:before, &:after {
+                display: block;
+                position: absolute;
+                top: 30px;
+                font-size: 12px;
+                color: $colorDarkGray;
+              }
+              &:before {
+                content: '|';
+                right: auto;
+                left: 50px;
+              }
+              &:after {
+                content: '|';
+                right: 50px;
+                left: auto;
+              }
+            }
+          }
+          & .progress {
+            border-radius: 30px;
+            border: 10px solid $colorWhite;
+            height: 41px;
+            background-color: $colorDarkGray;
+            overflow: visible;
+            &.time-line {
+              &:before, &:after {
+                display: block;
+                position: absolute;
+                top: -45px;
+                color: $colorDarkGray;
+              }
+              &:before {
+                content: '1';
+                right: auto;
+                left: 48px;
+              }
+              &:after {
+                content: '12';
+                right: 46px;
+                left: auto;
+              }
+            }
+            &.deposit-line {
+              &:before, &:after {
+                display: block;
+                position: absolute;
+                top: 48px;
+                color: $colorDarkGray;
+              }
+              &:before {
+                content: '$100';
+                right: auto;
+                left: 33px;
+              }
+              &:after {
+                content: '$5 000';
+                right: 28px;
+                left: auto;
+              }
+            }
+            &:after {
+              content: '';
+              box-shadow: inset 0 0 0 $colorDarkGray;
+              display: block;
+              height: 21px;
+            }
+            & .progress-bar {
+              height: 21px;
+              margin: 0;
+              line-height: 23px;
+              text-align: right;
+              font-size: 16px;
+              border-radius: 10px;
+              box-shadow: none;
+              padding: 0 15px 0 0;
+              &.month {
+                background-color: $colorBlue;
+              }
+              &.deposit {
+                background-color: $colorOrange;
+                position: relative;
+              }
+            }
+          }
+        }
+      }
+    }
+    & .well {
+      background-color: transparent;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+      margin: 0 0 -1px;
+      min-height: 130px;
+      position: relative;
+      z-index: 2;
+    }
+    & .carousel {
+      padding: 0;
+      height: 130px;
+      width: 800px;
+      margin: 0 auto;
+        @media #{$media} and ($max: $normal) {
+          width: 100%;
+        }
+      & a {
+        &.carousel-control {
+          &.left {
+            width: 27px;
+            height: 130px;
+            top: 0;
+            background: transparent none;
+            left: -25px;
+            z-index: 999;
+            cursor: pointer;
+            position: absolute;
+            padding: 0;
+            right: auto;
+            &.disabled {
+              pointer-events: none;
+              opacity: 0.2;
+            }
+          }
+          &.right {
+            width: 27px;
+            height: 130px;
+            top: 0;
+            background: transparent none;
+            z-index: 999;
+            cursor: pointer;
+            position: absolute;
+            padding: 0;
+            right: -25px;
+            left: auto;
+            &.disabled {
+              pointer-events: none;
+              opacity: 0.2;
+              cursor: none;
+            }
+          }
+        }
+        & span {
+          line-height: 130px;
+          height: 130px;
+          top: 0;
+          left: 0;
+          margin: 0;
+        }
+      }
+      & .carousel-inner {
+        height: 130px;
+        & .item {
+          width: 100%;
+          height: 130px;
+          & .row-fluid {
+            & div {
+              padding: 0;
+              margin: 0;
+              height: 130px;
+              &.carousel-indicators {
+                right: auto;
+                top: auto;
+                bottom: auto;
+                margin: 0;
+                position: relative;
+                left: auto;
+                z-index: 15;
+                width: auto;
+                padding: 0;
+                text-align: center;
+                list-style: none;
+              }
+              & a {
+                width: 200px;
+                height: 130px;
+                display: block;
+                position: relative;
+                margin: 0;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                border: 1px solid transparent;
+                @media #{$media} and ($max: $normal) {
+                  width: 167px;
+                }
+                @media #{$media} and ($max: $middle) {
+                  width: 145px;
+                }
+                @for $i from 1 through 10 {
+                  &.car-#{$i} {
+                    background: url(../bootstrap-slider-with-arrow/img/calc-car-#{$i}.png) center 20px no-repeat;
+                  }
+                }
+                & span {
+                  position: absolute;
+                  top: 0;
+                  padding: 75px 20px 0;
+                  font-size: 18px;
+                  line-height: 21px;
+                  right: 0;
+                  left: 0;
+                  color: black;
+                  text-shadow: none;
+                  text-align: center;
+                }
+
+                &.active {
+                  background-color: $colorLightGray;
+                  border: 1px solid $colorDarkGray;
+                  border-bottom: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    & .carousel-control {
+      left: -12px;
+      & .right {
+        right: -12px;
+      }
+    }
+  }
+}
