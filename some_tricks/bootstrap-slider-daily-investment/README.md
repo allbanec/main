@@ -1,17 +1,15 @@
-# Bootstrap Slider with arrow
-## Styled Bootstrap Slider with scroller and arrow
+# Bootstrap Slider Daily Investment interface
+## Styled Bootstrap Slider Investment interface with cool tracker
 
- The task is: to make a styled bootstrap tabs with slider, arrow and tab-navigation....
+ The task is: to make a styled bootstrap slider with cool navigation....
 
  I used:
-  [Bootstrap Tabs](http://getbootstrap.com/javascript/#tabs)
-  [Bootstrap Carousel](http://getbootstrap.com/javascript/#carousel)
-  [Bootstrap Thumbnails](http://getbootstrap.com/components/#thumbnails)
-  [Bootstrap Grid](http://getbootstrap.com/css/#grid)
+  [Bootstrap](http://getbootstrap.com)
+  [Bootstrap Slider](https://github.com/seiyria/bootstrap-slider)
 
  Thank You for all!
 
- There is not enough to close my task use standard plugins and options...
+ There is not enough to close my task use standard plugins and options(like every time)...
 
  I need to change the styles and to combine all of them in one plugin...
 
@@ -25,9 +23,9 @@
 
  You can see the working version in index.php file.
 
- Now this calculator located in some ours landing pages.
+ Now this calculator located in some our interfaces.
 
- Be sure it is responsive... i tested: IPAD(vertical and horizontal), Smartphone ... Galaxy III(horizontal)... vertical is to small to show all our options... sorry!
+ But it is not responsive...  sorry! No task... not done.
 
  Look`s same like this:
 

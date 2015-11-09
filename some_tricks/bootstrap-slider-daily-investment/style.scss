@@ -1,340 +1,198 @@
 $colorBlack: rgba(0,0,0,1);
 $colorWhite: rgba(255,255,255,1);
-$colorGray: #ccc;
-$colorLightGray: #D6D6D6;
-$colorDarkGray: #666;
-$colorBlue: #0075b5;
-$colorOrange: #FF6600;
-
-$media: screen;
-$min: max-width;
-$max: max-width;
-$small:360px;
-$middle: 640px;
-$normal:768px;
-$big: 1024px;
-$large: 1280px;
-
+$colorDarkGray: #2C2C2C;
+$colorSilver: rgba(189, 195, 199, 1);
+$colorGray:rgba(44, 44, 44, 1);
+$colorLightGray:#F9FAFC;
+$colorLightGreen:#44D554;
+$colorOrange:#FA8100;
+$colorLightBlue: #EEF5FD;
+$colorMiddleBlue: #EFF3F4;
+$colorDeepBlue: #E5E9EA;
+$colorDarkBlue: #597894;
+$colorLightBlack:#4D5763;
+$colorWhite: rgba(255, 255, 255, 1);
+$colorSky: rgba(29, 190, 207, 1);
+$colorBlue: #0B97D5;
+$colorDark: rgba(88, 88, 90, 1);
+$colorAsbestos:#717171;
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=latin,cyrillic);
-@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700,300&subset=latin,cyrillic);
 *{
   margin:0;
   padding:0;
   font:{
-    family: 'Fira Sans', sans-serif;
-    size:18px;
+    family: 'Roboto', sans-serif;
     weight: 300;
   };
-  color:$colorBlack;
+  color:$colorAsbestos;
   line-height: 27px;
-  outline:none;
 }
-body {
-  background-color: $colorBlack;
-  width: 100%;
-  max-width: 1920px;
-  overflow-x: hidden;
-  & .calculator {
-    width: 960px;
-    margin: 100px auto;
-    position: relative;
-    overflow: hidden;
-    padding: 50px;
-    background-color: $colorGray;
-      @media #{$media} and ($max: $normal) {
-        width: 100%;
-      }
-      @media #{$media} and ($max: $middle) {
-        padding:30px;
-      }
-    & .tab-content {
-      position: relative;
-      z-index: 1;
-      & .tab-pane {
-        height: 285px;
-        padding: 40px;
-        @media #{$media} and ($max: $normal) {
+body{
+  & .content{
+    width:100%;
+    min-width: 960px;
+    padding:10%;
+    z-index: 9;
+      & .panel-body{
+        background-color: $colorLightGray;
+        border:1px solid transparentize($colorSilver, 0.7);
+        padding: 20px;
+        margin:10px  auto;
+        position: relative;
+        &.calculator{
           padding: 20px;
+          background-color: $colorMiddleBlue;
+          & .roller{
+            display: block;
+            height: 80px;
+            position: relative;
+            top: 20px;
+            margin: 0 auto;
+          }
         }
-        &.active {
-          border: 1px solid $colorDarkGray;
-          background-color: #D6D6D6;
-          & h3 {
-            color: $colorDarkGray;
-            font-size: 28px;
-            font-weight: 500;
-            margin: 0;
-            width: 100%;
-            & small {
-              color: $colorBlue;
-              font-size: 36px;
-              font-weight: 500;
-              float: right;
-              &:before {
-                content: '~';
-                color: $colorBlue;
-                display: inline-block;
-                font-size: 28px;
-              }
+        & h2{
+          color:$colorDarkBlue;
+          font-weight: 400;
+          font-size:24px;
+          padding:0;
+          margin:0 0 10px;
+          display:inline-block;
+        }
+        & p, & label{
+          margin:0;
+          font-size: 18px;
+          line-height: 20px;
+          font-weight: 300;
+          color:$colorAsbestos;
+        }
+        & .slider{
+          &.slider-horizontal{
+            float:none;
+            display: block;
+            width: 630px;
+            margin:0 auto;
+            height:43px;
+            background-color: $colorDeepBlue;
+            border-radius: 19px;
+            border-top:1px solid transparentize($colorSilver, 0.15);
+            border-right:1px solid transparentize($colorSilver, 0.15);
+            border-bottom:1px solid transparentize($colorWhite, 0.15);
+            border-left:1px solid transparentize($colorWhite, 0.15);
+            box-shadow:inset -2px 2px 3px $colorSilver;
+            -webkit-box-shadow: inset -2px 2px 3px $colorSilver;
+            -moz-box-shadow: inset -2px 2px 3px $colorSilver;
+            .slider-tick-label-container{
+              margin: 0 auto;
+              width: 90%;
+              height: 29px;
+              position: absolute;
+              top: 6px;
+              left: 0;
+              right: 0;
             }
-          }
-        }
-        & .calculation {
-          margin: 50px auto 0;
-          @media #{$media} and ($max: $normal) {
-            margin:10px 0 0;
-          }
-          & div {
-            height: 41px;
-            line-height: 41px;
-            margin: 0 0 20px;
-            @media #{$media} and ($max: $normal) {
+            & .slider-track{
+              position:relative;
+              height:43px;
               margin:0;
-            }
-            &:nth-child(1), &:nth-child(3) {
-              padding: 0;
-            }
-            &.time-progresses {
-              &:before, &:after {
-                content: '|';
-                display: block;
-                position: absolute;
-                top: -30px;
-                font-size: 12px;
-                color: $colorDarkGray;
+              width: 91%;
+              top: 0;
+              left: 0;
+              border-radius: 11px;
+              background: none;
+              box-shadow:none;
+              & .slider-track-low{
+                box-shadow:none;
+                border-radius: 11px;
               }
-              &:before {
-                right: auto;
-                left: 50px;
+              & .slider-selection{
+                background:none;
+                box-shadow:none;
+                border-radius:0;
               }
-              &:after {
-                right: 50px;
-                left: auto;
-              }
-            }
-            &.deposit-progresses {
-              &:before, &:after {
-                display: block;
-                position: absolute;
-                top: 30px;
-                font-size: 12px;
-                color: $colorDarkGray;
-              }
-              &:before {
-                content: '|';
-                right: auto;
-                left: 50px;
-              }
-              &:after {
-                content: '|';
-                right: 50px;
-                left: auto;
-              }
-            }
-          }
-          & .progress {
-            border-radius: 30px;
-            border: 10px solid $colorWhite;
-            height: 41px;
-            background-color: $colorDarkGray;
-            overflow: visible;
-            &.time-line {
-              &:before, &:after {
-                display: block;
-                position: absolute;
-                top: -45px;
-                color: $colorDarkGray;
-              }
-              &:before {
-                content: '1';
-                right: auto;
-                left: 48px;
-              }
-              &:after {
-                content: '12';
-                right: 46px;
-                left: auto;
-              }
-            }
-            &.deposit-line {
-              &:before, &:after {
-                display: block;
-                position: absolute;
-                top: 48px;
-                color: $colorDarkGray;
-              }
-              &:before {
-                content: '$100';
-                right: auto;
-                left: 33px;
-              }
-              &:after {
-                content: '$5 000';
-                right: 28px;
-                left: auto;
-              }
-            }
-            &:after {
-              content: '';
-              box-shadow: inset 0 0 0 $colorDarkGray;
-              display: block;
-              height: 21px;
-            }
-            & .progress-bar {
-              height: 21px;
-              margin: 0;
-              line-height: 23px;
-              text-align: right;
-              font-size: 16px;
-              border-radius: 10px;
-              box-shadow: none;
-              padding: 0 15px 0 0;
-              &.month {
-                background-color: $colorBlue;
-              }
-              &.deposit {
-                background-color: $colorOrange;
-                position: relative;
-              }
-            }
-          }
-        }
-      }
-    }
-    & .well {
-      background-color: transparent;
-      border: none;
-      box-shadow: none;
-      padding: 0;
-      margin: 0 0 -1px;
-      min-height: 130px;
-      position: relative;
-      z-index: 2;
-    }
-    & .carousel {
-      padding: 0;
-      height: 130px;
-      width: 800px;
-      margin: 0 auto;
-        @media #{$media} and ($max: $normal) {
-          width: 100%;
-        }
-      & a {
-        &.carousel-control {
-          &.left {
-            width: 27px;
-            height: 130px;
-            top: 0;
-            background: transparent none;
-            left: -25px;
-            z-index: 999;
-            cursor: pointer;
-            position: absolute;
-            padding: 0;
-            right: auto;
-            &.disabled {
-              pointer-events: none;
-              opacity: 0.2;
-            }
-          }
-          &.right {
-            width: 27px;
-            height: 130px;
-            top: 0;
-            background: transparent none;
-            z-index: 999;
-            cursor: pointer;
-            position: absolute;
-            padding: 0;
-            right: -25px;
-            left: auto;
-            &.disabled {
-              pointer-events: none;
-              opacity: 0.2;
-              cursor: none;
-            }
-          }
-        }
-        & span {
-          line-height: 130px;
-          height: 130px;
-          top: 0;
-          left: 0;
-          margin: 0;
-        }
-      }
-      & .carousel-inner {
-        height: 130px;
-        & .item {
-          width: 100%;
-          height: 130px;
-          & .row-fluid {
-            & div {
-              padding: 0;
-              margin: 0;
-              height: 130px;
-              &.carousel-indicators {
-                right: auto;
-                top: auto;
-                bottom: auto;
-                margin: 0;
-                position: relative;
-                left: auto;
-                z-index: 15;
-                width: auto;
-                padding: 0;
-                text-align: center;
-                list-style: none;
-              }
-              & a {
-                width: 200px;
-                height: 130px;
-                display: block;
-                position: relative;
-                margin: 0;
-                border-bottom-left-radius: 0;
-                border-bottom-right-radius: 0;
-                border: 1px solid transparent;
-                @media #{$media} and ($max: $normal) {
-                  width: 167px;
-                }
-                @media #{$media} and ($max: $middle) {
-                  width: 145px;
-                }
-                @for $i from 1 through 10 {
-                  &.car-#{$i} {
-                    background: url(../bootstrap-slider-with-arrow/img/calc-car-#{$i}.png) center 20px no-repeat;
+              & .slider-tick{
+                margin:0;
+                background:transparent none;
+                box-shadow: none;
+                border-radius: 0;
+                height: 43px;
+                width: 43px;
+                font-size: 16px;
+                &:nth-child(1){
+                  &:before{
+                    content: '0.1%';
                   }
                 }
-                & span {
+              }
+              & .slider-handle{
+                border-radius: 5px;
+                width: 60px;
+                height: 68px;
+                top: -13px;
+                border:1px solid transparentize($colorSilver, 0.2);
+                border-top: 12px solid $colorLightGreen;
+                background:$colorWhite;
+                color:$colorDarkBlue;
+                position: relative;
+                padding: 0;
+                text-align: center;
+                font-size: 16px;
+                line-height: 48px;
+                font-weight: 500;
+                margin:0;
+                z-index: 99;
+                &:after{
+                  content: '||||||';
+                  display: block;
                   position: absolute;
-                  top: 0;
-                  padding: 75px 20px 0;
-                  font-size: 18px;
-                  line-height: 21px;
-                  right: 0;
+                  font-size: 10px;
+                  line-height: 14px;
                   left: 0;
-                  color: black;
-                  text-shadow: none;
+                  right: 0;
                   text-align: center;
+                  bottom: 0;
                 }
-
-                &.active {
-                  background-color: $colorLightGray;
-                  border: 1px solid $colorDarkGray;
-                  border-bottom: none;
+                &:hover{
+                  &:after{
+                    color:$colorLightGreen;
+                  }
                 }
+              }
+            }
+          }
+          & .tooltip{
+            &.top {
+              margin-top: -56px;
+              margin-left: -18px !important;
+              width:50px;
+              & .tooltip-arrow {
+                bottom: 0;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px 5px 0;
+                border-top-color:$colorSilver;
+                &:before{
+                  content: '';
+                  bottom: 1px;
+                  left: 50%;
+                  margin-left: -5px;
+                  position: absolute;
+                  width: 0;
+                  height: 0;
+                  border-style: solid;
+                  border-width: 5px 5px 0;
+                  border-color: $colorWhite transparent transparent transparent;
+                }
+              }
+              & .tooltip-inner {
+                padding: 3px 0;
+                color:$colorSilver;
+                background-color:$colorWhite;
+                font-size: 16px;
+                border: 1px solid $colorSilver;
               }
             }
           }
         }
       }
-    }
-    & .carousel-control {
-      left: -12px;
-      & .right {
-        right: -12px;
-      }
-    }
   }
 }
